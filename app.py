@@ -127,7 +127,7 @@ def register():
         cur.close()
 
         #for flash messages taking parameter and the category of message to be flashed
-        flash("Anda sudah terdaftar dan bisa login", "success")
+        flash("You are now registered and can log in", "success")
         
         #when registration is successful redirect to home
         return redirect(url_for('login'))
@@ -186,7 +186,7 @@ def is_logged_in(f):
 @is_logged_in
 def logout():
     session.clear()
-    flash("Anda sudah logout, silakan login dulu lagi", "success")
+    flash("You are now logged out", "success")
     return redirect(url_for('login'))
 
 #Dashboard
